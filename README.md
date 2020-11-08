@@ -233,7 +233,9 @@ To do this, program your FPGA with the circuit and select _Tools&rarr;In-System 
 
 <p align="center"><img src="figures/mem-editor.png" title="memory editor" width="75%" height="75%"></p>
 
-The In-System Memory Content Editor in only available for the single-ported memory configurations. The reason is simple: when you generate a memory with the in-system editing option enabled, Quartus generates circuitry to read and write your memory; that circuitry takes up one of the ports of the underlying embedded memory, leaving you with only one port.
+The In-System Memory Content Editor (ISMCE) in only available for the single-ported memory configurations. The reason is simple: when you generate a memory with the in-system editing option enabled, Quartus generates circuitry to read and write your memory; that circuitry takes up one of the ports of the underlying embedded memory, leaving you with only one port.
+
+**NOTE** when you generate memories which enable the ISMCE, or include other debugging options like SignalTap, then Quartus will add 4 extra top-level signals to your module when you generate a post-synthesis netlist. These signals are called `altera_reserved_tms`, `altera_reserved_tck`, `altera_reserved_tdi`, and `altera_reserved_tdo`; this last signal is an output, while the other three are all inputs. If you create a testbench that uses the `(.*)` notation to make connections with your DUT instance, then it will be looking for those signal names in your post-synthesis netlist testbench as well. The correct way to fix this problem is to not use the `(.*)` notation.
 
 
 #### Initializing memory contents in the FPGA
