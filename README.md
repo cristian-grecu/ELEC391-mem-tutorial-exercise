@@ -519,22 +519,22 @@ The evaluation of your submission consists of four parts:
 ### Task 2 [2 marks]
 
 - `ksa.sv`, `task2.sv`, `tb_rtl_ksa.sv`, `tb_rtl_task2.sv` `tb_syn_ksa.sv`, and `tb_syn_task2.sv`
-- include `init.sv` from task 1: either copy the file if you need to make local changes, or place ```include "../task1/init.sv"` in task2.sv
+- include `init.sv` from task 1: either copy the file if you need to make local changes, or place `\`include "../task1/init.sv"` in task2.sv
 - All other files required to implement and test your task, except generated memories
 - Any memory images you read in testbenches in this folder
 
 ### Task 3 [3 marks]
 
 - `prga.sv`, `arc4.sv`, `task3.sv`, `tb_rtl_prga.sv`. `tb_rtl_arc4.sv`, `tb_rtl_task3.sv`, `tb_syn_prga.sv`, `tb_syn_arc4.sv`, and `tb_syn_task3.sv`
-- include `init.sv` from task 1: either copy the file here if you need to make local changes, or place ```include "../task1/init.sv"` in arc4.sv
-- include `ksa.sv` from task 2: either copy the file here if you need to make local changes, or place ```include "../task2/ksa.sv"` in arc4.sv
+- include `init.sv` from task 1: either copy the file here if you need to make local changes, or place `\`include "../task1/init.sv"` in arc4.sv
+- include `ksa.sv` from task 2: either copy the file here if you need to make local changes, or place `\`include "../task2/ksa.sv"` in arc4.sv
 - All other files required to implement and test your task, except generated memories
 - Any memory images you read in testbenches in this folder
 
 ### Task 4 [2 marks]
 
 - `crack.sv`, `task4.sv`, `tb_rtl_crack.sv`, `tb_rtl_task4.sv`, `tb_syn_crack.sv`, and `tb_syn_task4.sv`
-- include `arc4.sv` from task 3: either copy the file if you need to make local changes, or place ```include "../task3/arc4.sv"` in crack.sv
+- include `arc4.sv` from task 3: either copy the file if you need to make local changes, or place `\`include "../task3/arc4.sv"` in crack.sv
 - be sure that `init.sv` and `ksa.sv` are also copied here if you need to make local changes, or otherwise get included properly by `arc4.sv`
 - All other files required to implement and test your task, except generated memories
 - Any memory images you read in testbenches in this folder
@@ -542,7 +542,7 @@ The evaluation of your submission consists of four parts:
 ### Task 5 [2 marks]
 
 - `doublecrack.sv`, `crack.sv`, `task5.sv`, `tb_rtl_doublecrack.sv`, `tb_rtl_crack.sv`, `tb_rtl_task5.sv`, `tb_syn_doublecrack.sv`, `tb_syn_crack.sv`, and `tb_syn_task5.sv`
-- include `arc4.sv` from task 3 or task 4: either copy the file if you need to make local changes, or place ```include "../taskN/arc4.sv"` in crack.sv
+- include `arc4.sv` from task 3 or task 4: either copy the file if you need to make local changes, or place `\`include "../taskN/arc4.sv"` in crack.sv
 - be sure that `init.sv` and `ksa.sv` are also copied here if you need to make local changes, or otherwise get included properly by `arc4.sv`
 - All other files required to implement and test your task, except generated memories
 - Any memory images you read in testbenches in this folder
