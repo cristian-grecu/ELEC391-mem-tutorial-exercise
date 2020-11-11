@@ -58,14 +58,16 @@ and proceeds as shown in this pseudocode:
 
     -- pseudo-random generation algorithm: generate byte stream (“pad”) to be xor'd with the ciphertext
     i = 0, j = 0
-    for k = 0 to message_length-1:
+    message_length = ciphertext[0]
+    for k = 1 to message_length:
         i = (i+1) mod 256
         j = (j+s[i]) mod 256
         swap values of s[i] and s[j]
         pad[k] = s[(s[i]+s[j]) mod 256]
 
     -- ciphertext xor pad --> plaintext
-    for k = 0 to message_length-1:
+    plaintext[0] = message_length
+    for k = 1 to message_length:
         plaintext[k] = pad[k] xor ciphertext[k]  -- xor each byte
 
 The length of the secret key can vary — in this lab, we will use a smaller key of 24 bits (3 bytes) to ensure that you can “crack” the encryption in a reasonable amount of time.
@@ -349,13 +351,15 @@ in netlist simulation.
 The final phase of ARC4 generates the bytestream that is then xor'd with the input plaintext to encrypt the message, or, as in our case, with the input ciphertext to decrypt it. We don't need the bytestream by itself, so in this task we will combine both.
 
     i = 0, j = 0
-    for k = 0 to message_length-1:
+    message_length = ciphertext[0]
+    for k = 1 to message_length:
         i = (i+1) mod 256
         j = (j+s[i]) mod 256
         swap values of s[i] and s[j]
         pad[k] = s[(s[i]+s[j]) mod 256]
 
-    for k = 0 to message_length-1:
+    plaintext[0] = message_length
+    for k = 1 to message_length:
         plaintext[k] = pad[k] xor ciphertext[k]  -- xor each byte
 
 First, generate two additional memories: one to hold the ciphertext (instance name _CT_), and another where you will write the plaintext (instance name _PT_). Both will be 8-bit wide and 256 8-bit words deep, and will connect to your ARC4 decryption module:
@@ -515,24 +519,31 @@ The evaluation of your submission consists of four parts:
 ### Task 2 [2 marks]
 
 - `ksa.sv`, `task2.sv`, `tb_rtl_ksa.sv`, `tb_rtl_task2.sv` `tb_syn_ksa.sv`, and `tb_syn_task2.sv`
+- include `init.sv` from task 1: either copy the file if you need to make local changes, or place ```include "../task1/init.sv"` in task2.sv
 - All other files required to implement and test your task, except generated memories
 - Any memory images you read in testbenches in this folder
 
 ### Task 3 [3 marks]
 
 - `prga.sv`, `arc4.sv`, `task3.sv`, `tb_rtl_prga.sv`. `tb_rtl_arc4.sv`, `tb_rtl_task3.sv`, `tb_syn_prga.sv`, `tb_syn_arc4.sv`, and `tb_syn_task3.sv`
+- include `init.sv` from task 1: either copy the file here if you need to make local changes, or place ```include "../task1/init.sv"` in arc4.sv
+- include `ksa.sv` from task 2: either copy the file here if you need to make local changes, or place ```include "../task2/ksa.sv"` in arc4.sv
 - All other files required to implement and test your task, except generated memories
 - Any memory images you read in testbenches in this folder
 
 ### Task 4 [2 marks]
 
 - `crack.sv`, `task4.sv`, `tb_rtl_crack.sv`, `tb_rtl_task4.sv`, `tb_syn_crack.sv`, and `tb_syn_task4.sv`
+- include `arc4.sv` from task 3: either copy the file if you need to make local changes, or place ```include "../task3/arc4.sv"` in crack.sv
+- be sure that `init.sv` and `ksa.sv` are also copied here if you need to make local changes, or otherwise get included properly by `arc4.sv`
 - All other files required to implement and test your task, except generated memories
 - Any memory images you read in testbenches in this folder
 
 ### Task 5 [2 marks]
 
 - `doublecrack.sv`, `crack.sv`, `task5.sv`, `tb_rtl_doublecrack.sv`, `tb_rtl_crack.sv`, `tb_rtl_task5.sv`, `tb_syn_doublecrack.sv`, `tb_syn_crack.sv`, and `tb_syn_task5.sv`
+- include `arc4.sv` from task 3 or task 4: either copy the file if you need to make local changes, or place ```include "../taskN/arc4.sv"` in crack.sv
+- be sure that `init.sv` and `ksa.sv` are also copied here if you need to make local changes, or otherwise get included properly by `arc4.sv`
 - All other files required to implement and test your task, except generated memories
 - Any memory images you read in testbenches in this folder
 
