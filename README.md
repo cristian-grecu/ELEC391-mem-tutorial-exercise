@@ -42,7 +42,7 @@ The basic ARC4 algorithm uses the following parameters:
 
 | Parameter | Type | Semantics |
 | --- | --- | --- |
-| `key[]` | input | array of bytes that represent the secret key (24 bits in our implementation) |
+| `key[]` | input | array of bytes that represent the secret key (3 bytes in our implementation) |
 | `ciphertext[]` | input | array of bytes that represent the encrypted message |
 | `plaintext[]` | output | array of bytes that represent the decrypted result (same length as ciphertext) |
 
