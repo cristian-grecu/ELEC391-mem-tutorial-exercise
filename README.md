@@ -1,4 +1,4 @@
-# Lab 3: Memories from Room 40
+# Lab 2: Memories from Room 40
 
 ## Contents
 
