@@ -4,6 +4,7 @@
 * [Embedded memories](#embedded-memories)
   * [The ready\-enable microprotocol](#the-ready-enable-microprotocol)
   * [Creating a RAM block using the Wizard](#creating-a-ram-block-using-the-wizard)
+  * [Simulating Altera memories in ModelSim](#simulating-altera-memories-in-modelsim)
 * [Designing the Decryption Circuit](#designing-the-decryption-circuit)
   * [General implementation requirements](#general-implementation-requirements)
   * [Task 1: ARC4 state initialization](#task-1-arc4-state-initialization)
