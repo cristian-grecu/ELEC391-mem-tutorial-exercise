@@ -7,6 +7,7 @@
   * [Simulating Altera memories in ModelSim](#simulating-altera-memories-in-modelsim)
   * [Examining memory contents when simulating RTL in Modelsim](#examining-memory-contents-when-simulating-rtl-in-modelsim)
   * [Examining memory contents when simulating a netlist in Modelsim](#examining-memory-contents-when-simulating-a-netlist-in-modelsim)
+  * [Initializing memory contents in simulation](#initializing-memory-contents-in-simulation)
 * [Designing the Decryption Circuit](#designing-the-decryption-circuit)
   * [General implementation requirements](#general-implementation-requirements)
   * [Task 1: ARC4 state initialization](#task-1-arc4-state-initialization)
