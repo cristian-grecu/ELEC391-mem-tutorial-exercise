@@ -11,9 +11,6 @@
   * [Examining memory contents in the FPGA in Quartus](#Examining-memory-contents-in-the-fpga-in-quartus)
   * [Initializing memory contents in the FPGA](#initializing-memory-contents-in-the-fpga)
   * [Memory state initialization](#memory-state-initialization)
-* [Designing the Decryption Circuit](#designing-the-decryption-circuit)
-  * [General implementation requirements](#general-implementation-requirements)
-  * [Task 1: ARC4 state initialization](#task-1-arc4-state-initialization)
 
 
 ### Embedded memories
