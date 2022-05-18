@@ -1,12 +1,8 @@
 # Tutorial-exercise: Embedded Memories 
 
 ## Contents
-
-* [Background](#background)
-  * [ARC4 Decryption](#arc4-decryption)
+* [Embedded memories](#embedded-memories)
   * [The ready\-enable microprotocol](#the-ready-enable-microprotocol)
-  * [Length\-prefixed strings](#length-prefixed-strings)
-  * [Embedded memories](#embedded-memories)
 * [Designing the Decryption Circuit](#designing-the-decryption-circuit)
   * [General implementation requirements](#general-implementation-requirements)
   * [Task 1: ARC4 state initialization](#task-1-arc4-state-initialization)
