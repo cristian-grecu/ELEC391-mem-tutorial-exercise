@@ -3,18 +3,10 @@
 ## Contents
 * [Embedded memories](#embedded-memories)
   * [The ready\-enable microprotocol](#the-ready-enable-microprotocol)
+  * [Creating a RAM block using the Wizard] (#creating-a-RAM-block-using-the-Wizard)
 * [Designing the Decryption Circuit](#designing-the-decryption-circuit)
   * [General implementation requirements](#general-implementation-requirements)
   * [Task 1: ARC4 state initialization](#task-1-arc4-state-initialization)
-  * [Task 2: The Key\-Scheduling Algorithm](#task-2-the-key-scheduling-algorithm)
-  * [Task 3: The Pseudo\-Random Generation Algorithm](#task-3-the-pseudo-random-generation-algorithm)
-  * [Task 4: Cracking ARC4](#task-4-cracking-arc4)
-  * [Task 5: Cracking in parallel](#task-5-cracking-in-parallel)
-* [Deliverables and evaluation](#deliverables-and-evaluation)
-  * [Automatic testing](#automatic-testing)
-  * [Marks](#marks)
-* [Extra ciphertexts](#extra-ciphertexts)
-
 
 
 ### Embedded memories
