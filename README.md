@@ -10,6 +10,7 @@
   * [Initializing memory contents in simulation](#initializing-memory-contents-in-simulation)
   * [Examining memory contents in the FPGA in Quartus](#Examining-memory-contents-in-the-fpga-in-quartus)
   * [Initializing memory contents in the FPGA](#initializing-memory-contents-in-the-fpga)
+  * [Memory state initialization](#memory-state-initialization)
 * [Designing the Decryption Circuit](#designing-the-decryption-circuit)
   * [General implementation requirements](#general-implementation-requirements)
   * [Task 1: ARC4 state initialization](#task-1-arc4-state-initialization)
@@ -170,7 +171,7 @@ The In-System Memory Content Editor (ISMCE) in only available for the single-por
 In Quartus, you can initialize memories at compilation time using either a Memory Initialization File (.mif) or an Intel Hex Format file (.hex). We recommend you use the first format because it's _a lot_ easier to read, but it's up to you. Either way, Quartus includes a table-like editor for these formats; you can create a new file via _File&rarr;New&rarr;Memory Files_.
 
 
-### Memory state initialization
+#### Memory state initialization
 
 In the `task1` folder you will find a `init.sv` and a toplevel file `task1.sv`. In `init.sv`, you will initialize the content of the memory to [0..255], which you could express in pseudo-code as:
 
